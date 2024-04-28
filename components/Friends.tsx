@@ -5,7 +5,7 @@ import { auth } from '@/auth'
 
 const Friends = async () => {
   const authUser = await auth();
-  const otherUsers = authUser?.user ? await getSidebarUsers(authUser?.user?. id) : [];
+  const otherUsers = authUser?.user ? await getSidebarUsers(authUser?.user?._id) : [];
 
   return (
     <div className='flex-1 overflow-y-auto'>
